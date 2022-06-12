@@ -39,6 +39,8 @@ const Exercises = ({setExercises, exercises, bodyPart}) => {
     fetchExercisesData()
   },[bodyPart])
 
+  console.log(exercises);
+
   return (
     <Box id="exercises"
        sx={{ mt: { lg: '109px' } }} mt="50px" p="20px">

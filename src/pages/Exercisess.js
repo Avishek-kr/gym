@@ -34,8 +34,7 @@ const Exercisess = () => {
     fetchExercisesData()
   },[])
 
-console.log(exercises);
-
+  console.log(exercises);
   return (
     <Box p="20px">
         <Typography textAlign="center" variant="h3" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px"  mt="46px">All Exercises</Typography>

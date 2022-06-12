@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {Box, Button, Stack, TextField, Typography} from "@mui/material"
 import {exerciseOptions, fetchData} from '../utils/fetchData'
 import HorizontalScrollbar from './HorizontalScrollbar'
+import { Link } from 'react-scroll'
 
 const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
 
@@ -50,6 +51,7 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
           placeholder="Search Exercises"
           type="text"
          />
+         <Link activeClass="active" to="exercises" spy={true} smooth={true} offset={0} duration={1000}>
          <Button className="search-btn"
          sx={{
           backgroundColor: '#FF2625',
@@ -65,6 +67,7 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
          >
           Search
          </Button>
+        </Link>
       </Box>
       <Box sx={{position: 'relative', width:'100%', p:'20px'}}>
           <HorizontalScrollbar data={bodyParts} setBodyPart={setBodyPart} bodyPart={bodyPart}  />
